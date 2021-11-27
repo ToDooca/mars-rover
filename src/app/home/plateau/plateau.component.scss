@@ -1,0 +1,11 @@
+.plateau-wrapper {
+  //grid-template-columns: auto auto auto auto auto auto;
+  display: inline-grid;
+}
+
+.canvas-field {
+  background-color: #3e90d9;
+  border: 1px solid #282828;
+  width: 5em;
+  height: 5em;
+}
