@@ -1,0 +1,18 @@
+.joystick-wrapper {
+  background-color: #c1c1c1;
+  height: 15em;
+  width: 40em;
+  border: rgba(130, 130, 130, 0.8) 0.2em solid;
+  border-radius: 2em;
+  -webkit-box-shadow: 0.2em 0.2em 1.2em 0 rgba(0,0,0,0.8);
+  box-shadow: 0.4em 0.4em 1.2em 0 rgba(0,0,0,0.8);
+}
+
+button, mat-form-field {
+  margin-left: 0.3em;
+  margin-right: 0.3em;
+}
+
+.left-right-btn-group {
+  margin: 1em;
+}

@@ -1,6 +1,7 @@
 .plateau-wrapper {
-  //grid-template-columns: auto auto auto auto auto auto;
   display: inline-grid;
+  align-content: center;
+  margin: 1em;
 }
 
 .canvas-field {

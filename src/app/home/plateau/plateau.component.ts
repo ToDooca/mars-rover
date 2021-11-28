@@ -6,9 +6,9 @@ import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/
   styleUrls: ['./plateau.component.scss']
 })
 export class PlateauComponent implements OnInit, AfterViewInit {
-  xAxisFields: number = 7;
   @ViewChild('columns') columns!: ElementRef;
-  yAxisFields: number = 4;
+  xAxisFields: number = 6;
+  yAxisFields: number = 7;
   fields: number[] = [];
 
   constructor() {
@@ -23,21 +23,12 @@ export class PlateauComponent implements OnInit, AfterViewInit {
   }
 
   injectProperties() {
-    let property: string = "";
-    for (let i = 0; i < this.xAxisFields; i++) {
-      property += "auto";
-      if(i !== this.xAxisFields){
-        property += " ";
-      }
-    }
-    this.columns.nativeElement.style.gridTemplateColumns = property;
+    this.columns.nativeElement.style.gridTemplateColumns = new Array(this.xAxisFields).fill("auto").join(" ");
   }
 
   calculateFields() {
     const fields = this.xAxisFields * this.yAxisFields;
-    for (let i = 1; i <= fields; i++) {
-      this.fields.push(i);
-    }
+    this.fields = Array.from({length: fields}, (_, i) => i + 1);
   }
 
   changeFieldDimensions(xAxis: number, yAxis: number) {

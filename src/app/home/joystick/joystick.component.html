@@ -1,1 +1,24 @@
-<p>joystick works!</p>
+<div class="joystick-wrapper">
+  <form>
+    <div class="left-right-btn-group">
+      <button mat-raised-button type="button" color="accent">
+        <mat-icon>undo</mat-icon>
+      </button>
+      <button mat-raised-button type="button" color="accent">
+        <mat-icon>redo</mat-icon>
+      </button>
+    </div>
+    <div class="coordinates-input-fields">
+      <mat-form-field appearance="fill">
+        <input matInput placeholder="X axis">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <input matInput placeholder="Y axis">
+      </mat-form-field>
+      <button mat-raised-button color="primary">Move to coordinates</button>
+    </div>
+    <button mat-raised-button color="primary">Add Rover</button>
+    <button mat-raised-button color="primary">Move 1</button>
+    <button mat-raised-button color="primary">Rover List</button>
+  </form>
+</div>
